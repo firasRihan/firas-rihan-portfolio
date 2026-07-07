@@ -33,7 +33,7 @@ export interface Stat {
 
 export const site = {
   name: "FIRAS RIHAN",
-  role: "Senior Full-Stack Engineer (L3) · Team Lead",
+  role: "Senior Full-Stack Engineer (L3) · Technical Lead · Product & Platform",
   tagline:
     "I build and lead development of business-critical retail platforms used daily across 6,000+ U.S. retail stores.",
   location: "Beirut, Lebanon · Working remotely worldwide",
@@ -60,13 +60,13 @@ export const navLinks = [
 export const about = {
   paragraphs: [
     "Senior full-stack engineer with 5+ years of experience delivering production systems. Currently technical lead for a business-critical retail-operations platform used daily by staff across 6,000+ U.S. retail locations (Metro by T-Mobile), supporting inventory, ERP, point-of-sale, and back-office operations.",
-    "Progressed three levels (L1 → L3) in under four years and was selected for Realtime's flagship platforms — an engagement reserved for the most experienced engineers. Known for shipping exceptionally clean, thoroughly tested code with near-zero QA rejections, and for solving time-critical production issues others couldn't.",
+    "Entrusted with Realtime's flagship platforms, an engagement reserved for the company's most experienced engineers. Known for shipping exceptionally clean, thoroughly tested code with near-zero QA rejections, and for solving time-critical production issues others couldn't.",
     "Self-built engineer from the pre-AI era who now leverages AI tooling (Claude Code, Copilot) to multiply productivity.",
   ],
 };
 
 export const stats: Stat[] = [
-  { value: 5, suffix: "+", label: "Years Experience" },
+  { value: 6, suffix: "+", label: "Years Experience" },
   { value: 15, suffix: "+", label: "Projects Shipped" },
   {
     value: 6000,
@@ -77,7 +77,7 @@ export const stats: Stat[] = [
 
 export const experience: ExperienceEntry[] = [
   {
-    role: "L3 Senior Software Engineer · Team Lead",
+    role: "L3 Senior Software Engineer · Technical Lead · Product & Platform",
     company:
       "Realtime — Metro by T-Mobile Retail Technology Partner (via Acksession LLC)",
     location: "Remote",
@@ -101,7 +101,6 @@ export const experience: ExperienceEntry[] = [
       "Designs and builds full-stack applications end-to-end (React/Next.js/Angular; ASP.NET Core & Node.js) across inventory, ERP, POS, e-commerce, and municipal billing domains",
       "Delivered: Solvit (multi-tenant medical platform, MENA region, web + app), Green Horizon (municipal resident-mapping & billing platform — bills 2,000 residents monthly, sole PM & dev), full POS suite (storefront, admin portal, e-commerce, image service), Queueing System, BluWater client site, BlueSeed ERP",
       "Built identity & access management for an ERP platform (ERP-IAM); designed RESTful APIs; worked across AWS (ECS, Amplify, RDS, Cognito, Secrets Manager)",
-      "Promoted L1 → L2 → L3 in under four years",
     ],
   },
   {
