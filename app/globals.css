@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ════════════════════════════════════════════════════════════════
+   DESIGN TOKENS — EDIT ALL COLORS HERE (single source of truth)
+   Values are space-separated RGB so Tailwind can apply opacity.
+   Tailwind maps them in tailwind.config.ts; the Three.js / canvas
+   scenes read them at runtime via lib/theme.ts.
+   ════════════════════════════════════════════════════════════════ */
+:root {
+  color-scheme: dark;
+  --accent: 72 255 194; /* #48ffc2 — signal green */
+  --bg: 5 7 8; /* near-black, slightly cool */
+  --text-hi: 255 255 255; /* headings / emphasis */
+  --text-body: 226 232 233; /* body copy */
+  --text-mute: 143 155 157; /* captions / labels */
+  --line: 255 255 255; /* hairlines (used at low opacity) */
+}
+
+html {
+  scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background-color: rgb(var(--bg));
+  color: rgb(var(--text-body));
+  overflow-x: hidden;
+}
+
+/* film grain */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background-color: rgb(var(--accent) / 0.35);
+  color: rgb(var(--text-hi));
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(var(--bg));
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--line) / 0.15);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--accent) / 0.5);
+}
+
+/* typography helpers */
+.text-glow {
+  text-shadow: 0 0 18px rgb(var(--accent) / 0.5), 0 0 60px rgb(var(--accent) / 0.2);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1.5px rgb(var(--text-hi) / 0.9);
+  color: transparent;
+}
+
+.text-stroke-accent {
+  -webkit-text-stroke: 1.5px rgb(var(--accent) / 0.9);
+  color: transparent;
+}
+
+@media (max-width: 640px) {
+  .text-stroke,
+  .text-stroke-accent {
+    -webkit-text-stroke-width: 1px;
+  }
+}
+
+/* surfaces */
+.panel {
+  background: rgb(var(--line) / 0.03);
+  border: 1px solid rgb(var(--line) / 0.1);
+  transition: border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+}
+
+.panel:hover {
+  border-color: rgb(var(--accent) / 0.55);
+  box-shadow: 0 0 24px rgb(var(--accent) / 0.12);
+  transform: translateY(-4px);
+}
+
+/* custom cursor (activated by JS on fine pointers only) */
+body.custom-cursor,
+body.custom-cursor a,
+body.custom-cursor button,
+body.custom-cursor [role="button"] {
+  cursor: none;
+}
