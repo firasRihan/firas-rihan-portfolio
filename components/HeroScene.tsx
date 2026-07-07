@@ -16,14 +16,16 @@ export default function HeroScene() {
     const mount = mountRef.current;
     if (!mount) return;
 
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       42,
       mount.clientWidth / Math.max(mount.clientHeight, 1),
       0.1,
-      100
+      100,
     );
     camera.position.set(0, 0, 8);
 
@@ -56,9 +58,9 @@ export default function HeroScene() {
     pointsGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
     const pointsMat = new THREE.PointsMaterial({
       color: accent,
-      size: 0.028,
+      size: 0.03,
       transparent: true,
-      opacity: 0.8,
+      opacity: 1,
       blending: THREE.AdditiveBlending,
       depthWrite: false,
     });
@@ -75,7 +77,7 @@ export default function HeroScene() {
       return new THREE.Vector3(
         R * Math.sin(phi) * Math.cos(theta),
         R * Math.cos(phi),
-        R * Math.sin(phi) * Math.sin(theta)
+        R * Math.sin(phi) * Math.sin(theta),
       );
     };
 
@@ -90,7 +92,9 @@ export default function HeroScene() {
         .normalize()
         .multiplyScalar(R * (1.3 + Math.random() * 0.55));
       const curve = new THREE.QuadraticBezierCurve3(a, mid, b);
-      const arcGeo = new THREE.BufferGeometry().setFromPoints(curve.getPoints(48));
+      const arcGeo = new THREE.BufferGeometry().setFromPoints(
+        curve.getPoints(48),
+      );
       const arcMat = new THREE.LineBasicMaterial({
         color: accent,
         transparent: true,
@@ -106,7 +110,7 @@ export default function HeroScene() {
     const ringMat = new THREE.MeshBasicMaterial({
       color: accent,
       transparent: true,
-      opacity: 0.18,
+      opacity: 0.25,
       side: THREE.DoubleSide,
     });
     const ring = new THREE.Mesh(ringGeo, ringMat);

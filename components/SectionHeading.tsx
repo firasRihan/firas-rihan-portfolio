@@ -53,7 +53,9 @@ export default function SectionHeading({
       </p>
       <div className="mt-4 overflow-hidden">
         <h2 className="sh-title font-display text-3xl font-extrabold uppercase leading-none text-hi sm:text-6xl lg:text-7xl">
+          <span className="text-accent">{"<"}</span>
           {title}
+          <span className="text-accent">{"/>"}</span>
         </h2>
       </div>
       {subtitle ? (
