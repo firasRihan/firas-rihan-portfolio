@@ -48,12 +48,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Firas Rihan Portfolio",
+    images: [
+      {
+        url: "/icon.svg",
+        width: 512,
+        height: 512,
+        alt: "Firas Rihan Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Firas Rihan | Senior Full-Stack Engineer",
     description:
       "Senior Full-Stack Engineer (L3) & Team Lead building business-critical retail platforms used daily across 6,000+ U.S. retail stores.",
+    images: ["/icon.svg"],
   },
 };
 
