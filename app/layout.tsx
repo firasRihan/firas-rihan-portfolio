@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Firas Rihan | Senior Full-Stack Engineer",
   description:
-    "Senior Full-Stack Engineer (L3) & Team Lead building business-critical retail platforms used daily across 6,000+ U.S. retail stores. React, Next.js, Angular, .NET Core, Node.js, Azure & AWS.",
+    "Senior Full-Stack Engineer & Technical Lead building business-critical retail platforms used daily across 6,000+ U.S. retail stores. React, Next.js, Angular, .NET Core, Node.js, Azure & AWS.",
   keywords: [
     "Firas Rihan",
     "Senior Full-Stack Engineer",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Firas Rihan | Senior Full-Stack Engineer",
     description:
-      "Senior Full-Stack Engineer (L3) & Team Lead building business-critical retail platforms used daily across 6,000+ U.S. retail stores.",
+      "Senior Full-Stack Engineer & Technical Lead building business-critical retail platforms used daily across 6,000+ U.S. retail stores. React, Next.js, Angular, .NET Core, Node.js, Azure & AWS.",
     type: "website",
     locale: "en_US",
     siteName: "Firas Rihan Portfolio",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Firas Rihan | Senior Full-Stack Engineer",
     description:
-      "Senior Full-Stack Engineer (L3) & Team Lead building business-critical retail platforms used daily across 6,000+ U.S. retail stores.",
+      "Senior Full-Stack Engineer & Technical Lead building business-critical retail platforms used daily across 6,000+ U.S. retail stores. React, Next.js, Angular, .NET Core, Node.js, Azure & AWS.",
     images: ["/icon.svg"],
   },
 };
