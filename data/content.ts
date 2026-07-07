@@ -68,8 +68,11 @@ export const about = {
 export const stats: Stat[] = [
   { value: 5, suffix: "+", label: "Years Experience" },
   { value: 15, suffix: "+", label: "Projects Shipped" },
-  { value: 6000, suffix: "+", label: "U.S. Retail Stores Served Daily" },
-  { value: 3, suffix: "", label: "Promotions in <4 Years" },
+  {
+    value: 6000,
+    suffix: "+",
+    label: "U.S. Retail Stores Powered by Our Platforms",
+  },
 ];
 
 export const experience: ExperienceEntry[] = [

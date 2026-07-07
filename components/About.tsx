@@ -8,7 +8,10 @@ import { staggerContainer, staggerItem, viewportOnce } from "./motion";
 
 export default function About() {
   return (
-    <section id="about" className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32">
+    <section
+      id="about"
+      className="relative mx-auto max-w-6xl px-5 py-24 sm:px-8 sm:py-32"
+    >
       <SectionHeading index="01" eyebrow="SYSTEM.OVERVIEW" title="About" />
 
       <div className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
@@ -47,7 +50,7 @@ export default function About() {
         initial="hidden"
         whileInView="visible"
         viewport={viewportOnce}
-        className="mt-20 grid grid-cols-2 border-t border-line/10 lg:grid-cols-4"
+        className="mt-20 grid grid-cols-2 border-t border-line/10 lg:grid-cols-3"
       >
         {stats.map((stat, i) => (
           <motion.div
@@ -60,7 +63,7 @@ export default function About() {
             <dt className="order-2 mt-3 block font-mono text-[10px] uppercase tracking-[0.2em] text-mute sm:text-xs">
               {stat.label}
             </dt>
-            <dd className="order-1 font-display text-4xl font-extrabold text-accent sm:text-5xl">
+            <dd className="order-1 font-display text-4xl font-extrabold text-accent sm:text-4xl">
               <CountUp target={stat.value} suffix={stat.suffix} />
             </dd>
           </motion.div>
