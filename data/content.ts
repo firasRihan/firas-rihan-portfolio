@@ -33,7 +33,7 @@ export interface Stat {
 
 export const site = {
   name: "FIRAS RIHAN",
-  role: "Senior Full-Stack Engineer (L3) · Technical Lead · Product & Platform",
+  role: "Senior Full-Stack Engineer · Technical Lead · Product & Platform",
   tagline:
     "I build and lead development of business-critical retail platforms used daily across 6,000+ U.S. retail stores.",
   location: "Beirut, Lebanon · Working remotely worldwide",
